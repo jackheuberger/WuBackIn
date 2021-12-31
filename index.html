@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WUBACKIN</title>
+    <link rel="stylesheet" href="index.css" media="all">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.2.0/build/global/luxon.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1 id ="title">WashU IS BACK IN</h1>
+        <h1 id="time">Time</h1>
+        Todd Sproull, I hope you're proud of me.
+    </div>
+    <script>
+        var DateTime = luxon.DateTime;
+        time = document.getElementById("time")
+        let now = DateTime.local()
+        let retDate = DateTime.fromISO("2022-01-31T23:00:00.000-06:00", { zone: "America/Chicago" });
+        diff = retDate.diff(now, ['days', 'hours', 'minutes', 'seconds'])
+        time.innerHTML = diff.values.days + " day(s), " + diff.values.hours + " hour(s), " + diff.values.minutes + " minute(s), and " + diff.values.seconds + " second(s)."
+        console.log(retDate.diff(now, ['days', 'minutes', 'seconds']))
+    </script>
+</body>
+</html>

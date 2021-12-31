@@ -1,0 +1,17 @@
+#title {
+    color: red;
+    font-weight: bold;
+}
+
+#time {
+    color: green;
+    font-weight: bold;
+}
+
+div {
+    text-align: center;
+}
+
+body {
+    background-color: rgb(169, 253, 169);
+}
