@@ -15,3 +15,7 @@ div {
 body {
     background-color: rgb(169, 253, 169);
 }
+
+img {
+    width: 50%;
+}
